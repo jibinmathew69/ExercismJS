@@ -28,10 +28,10 @@ export function insertItemAtBottom(cards, newCard) {
 }
 
 export function removeItemAtBottom(cards) {
-	cards.pop();
+	cards.shift();
 	return cards;
 }
 
 export function checkSizeOfStack(cards, stackSize) {
-	return cards.length === stackSize;
+	return cards.length == stackSize;
 }
