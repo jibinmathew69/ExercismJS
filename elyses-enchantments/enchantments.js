@@ -13,23 +13,17 @@ export function insertItemAtTop(cards, newCard) {
 }
 
 export function removeItem(cards, position) {
-	return cards.splice(position, 1);
+	cards = cards.splice(position, 1);
+	return cards;
 }
 
 export function removeItemFromTop(cards) {
-	return cards.shift();
+	cards = cards.shift();
+	return cards;
 }
 
-/**
- * Insert newCard at beginning of the cards array
- *
- * @param {number[]} cards
- * @param {number} newCard
- *
- * @returns {number[]} the cards including the new card
- */
 export function insertItemAtBottom(cards, newCard) {
-  throw new Error('Implement the insertItemAtBottom function');
+	return
 }
 
 /**
