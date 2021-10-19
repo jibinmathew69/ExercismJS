@@ -7,16 +7,9 @@ export function setItem(cards, position, replacementCard) {
 	return cards;
 }
 
-/**
- * Insert newCard at the end of the cards array
- *
- * @param {number[]} cards
- * @param {number} newCard
- *
- * @returns {number[]} the cards with the newCard applied
- */
 export function insertItemAtTop(cards, newCard) {
-  throw new Error('Implement the insertItemAtTop function');
+	cards.push(newCard);
+	return cards;
 }
 
 /**
