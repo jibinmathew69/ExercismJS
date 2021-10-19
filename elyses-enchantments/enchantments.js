@@ -12,27 +12,12 @@ export function insertItemAtTop(cards, newCard) {
 	return cards;
 }
 
-/**
- * Remove the card at the 0-based position
- *
- * @param {number[]} cards
- * @param {number} position
- *
- * @returns {number[]} the cards without the removed card
- */
 export function removeItem(cards, position) {
-  throw new Error('Implement the removeItem function');
+	return cards.splice(position, 1);
 }
 
-/**
- * Remove card from the end of the cards array
- *
- * @param {number[]} cards
- *
- * @returns {number[]} the cards without the removed card
- */
 export function removeItemFromTop(cards) {
-  throw new Error('Implement the removeItemFromTop function');
+	return cards.shift();
 }
 
 /**
