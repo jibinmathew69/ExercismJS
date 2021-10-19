@@ -23,7 +23,8 @@ export function removeItemFromTop(cards) {
 }
 
 export function insertItemAtBottom(cards, newCard) {
-	return
+	cards = cards.unshift(newCard);
+	return cards;
 }
 
 /**
