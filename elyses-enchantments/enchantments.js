@@ -13,32 +13,25 @@ export function insertItemAtTop(cards, newCard) {
 }
 
 export function removeItem(cards, position) {
-	cards = cards.splice(position, 1);
+	cards.splice(position, 1);
 	return cards;
 }
 
 export function removeItemFromTop(cards) {
-	cards = cards.pop();
+	cards.pop();
 	return cards;
 }
 
 export function insertItemAtBottom(cards, newCard) {
-	cards = cards.unshift(newCard);
+	cards.unshift(newCard);
 	return cards;
 }
 
 export function removeItemAtBottom(cards) {
-  throw new Error('Implement the removeItemAtBottom function');
+	cards.pop();
+	return cards;
 }
 
-/**
- * Compare the number of cards with the given stackSize
- *
- * @param {number[]} cards
- * @param {number} stackSize
- *
- * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
- */
 export function checkSizeOfStack(cards, stackSize) {
-  throw new Error('Implement the checkSizeOfStack function');
+	return cards.length === stackSize;
 }
