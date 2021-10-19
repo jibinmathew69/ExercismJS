@@ -18,7 +18,7 @@ export function removeItem(cards, position) {
 }
 
 export function removeItemFromTop(cards) {
-	cards = cards.shift();
+	cards = cards.pop();
 	return cards;
 }
 
@@ -27,13 +27,6 @@ export function insertItemAtBottom(cards, newCard) {
 	return cards;
 }
 
-/**
- * Remove card from the beginning of the cards cards
- *
- * @param {number[]} cards
- *
- * @returns {number[]} the cards without the removed card
- */
 export function removeItemAtBottom(cards) {
   throw new Error('Implement the removeItemAtBottom function');
 }
