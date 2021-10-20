@@ -15,13 +15,8 @@ export function birdsInWeek(birdsPerDay, week) {
 	return count;
 }
 
-/**
- * Fixes the counting mistake by increasing the bird count
- * by one for every second day.
- *
- * @param {number[]} birdsPerDay
- * @returns {number[]} corrected bird count data
- */
 export function fixBirdCountLog(birdsPerDay) {
-  throw new Error('Please implement the fixBirdCountLog function');
+	for(let i; i<birdsPerDay.length; i+=2){
+		birdsPerDay[i] += 1;
+	}
 }
