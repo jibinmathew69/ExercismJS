@@ -1,5 +1,5 @@
 export function needsLicense(kind) {
-	return kind === 'car'||'truck'?true:false;
+	return (kind === 'car'||kind === 'truck')?true:false;
 }
 
 export function chooseVehicle(option1, option2) {
