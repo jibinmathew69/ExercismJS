@@ -3,7 +3,8 @@ export function needsLicense(kind) {
 }
 
 export function chooseVehicle(option1, option2) {
-	return option1<option2?option1:option2;
+	choice = option1<option2?option1:option2;
+	return choice + " is clearly the better choice."
 }
 
 export function calculateResellPrice(originalPrice, age) {
