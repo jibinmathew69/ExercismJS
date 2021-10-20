@@ -1,6 +1,6 @@
 export function totalBirdCount(birdsPerDay) {
 	let count = 0;
-	forEach(birds in birdsPerDay){
+	for(birds in birdsPerDay){
 		count += birds;
 	}
 	return count;
@@ -19,4 +19,5 @@ export function fixBirdCountLog(birdsPerDay) {
 	for(let i; i<birdsPerDay.length; i+=2){
 		birdsPerDay[i] += 1;
 	}
+	return birdsPerDay;
 }
