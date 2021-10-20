@@ -1,7 +1,7 @@
 export function totalBirdCount(birdsPerDay) {
 	let count = 0;
-	for(birds in birdsPerDay){
-		count += birds;
+	for(let i=0; i<birdsPerDay.length; i++){
+		count += birdsPerDay[i];
 	}
 	return count;
 }
