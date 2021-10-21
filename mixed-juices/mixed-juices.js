@@ -3,7 +3,7 @@ const DRINK_TIME = {
 	'Energizer': 1.5,
 	'Green Garden': 1.5,
 	'Tropical Island': 3,
-	'All or Nothing': 3,
+	'All or Nothing': 5,
 }
 
 const WEDGES = {
