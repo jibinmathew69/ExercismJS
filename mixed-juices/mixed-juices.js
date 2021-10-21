@@ -26,5 +26,10 @@ export function limesToCut(wedgesNeeded, limes) {
 }
 
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function');
+	let count = 0;
+	while(timeLeft>0 && count<orders[count]){
+		timeLeft -= DRINK_TIME[orders[count]];
+		count += 1;
+	}
+	return order[count] || [];]
 }
