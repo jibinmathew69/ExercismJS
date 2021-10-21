@@ -27,9 +27,9 @@ export function limesToCut(wedgesNeeded, limes) {
 
 export function remainingOrders(timeLeft, orders) {
 	let count = 0;
-	while(timeLeft>0 && count<orders[count]){
+	while(timeLeft>0 && count<orders.length){
 		timeLeft -= DRINK_TIME[orders[count]];
 		count += 1;
 	}
-	return order[count] || [];]
+	return orders.slice(count) || [];
 }
