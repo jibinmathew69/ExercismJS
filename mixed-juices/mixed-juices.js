@@ -1,0 +1,18 @@
+const DRINK_TIME = {
+	'Pure Strawberry Joy': 0.5,
+	'Energizer': 1.5,
+	'Green Garden': 1.5,
+	'Tropical Island': 3,
+	'All or Nothing': 3,
+}
+export function timeToMixJuice(name) {
+	return DRINK_TIME[name] || 2.5;
+}
+
+export function limesToCut(wedgesNeeded, limes) {
+  throw new Error('Please implement the limesToCut function');
+}
+
+export function remainingOrders(timeLeft, orders) {
+  throw new Error('Please implement the remainingOrders function');
+}
