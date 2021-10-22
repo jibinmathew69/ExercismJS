@@ -1,6 +1,6 @@
 let scoreBoard = {};
 export function createScoreBoard() {
-	scoreBoard["The Best Ever"];
+	scoreBoard["The Best Ever"] = 1_000_000;
 	return scoreBoard;
 }
 
