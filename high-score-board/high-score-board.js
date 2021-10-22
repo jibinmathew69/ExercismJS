@@ -5,8 +5,10 @@ export function createScoreBoard() {
 }
 
 export function addPlayer(scoreBoard, player, score) {
-  throw new Error('Please implement the addPlayer function');
+	scoreBoard[player] = score;
+	return scoreBoard;
 }
+
 export function removePlayer(scoreBoard, player) {
   throw new Error('Please implement the removePlayer function');
 }
