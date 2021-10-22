@@ -15,7 +15,8 @@ export function removePlayer(scoreBoard, player) {
 }
 
 export function updateScore(scoreBoard, player, points) {
-  throw new Error('Please implement the addToScore function');
+	scoreBoard[player] += points;
+	return scoreBoard;
 }
 
 export function applyMondayBonus(scoreBoard) {
