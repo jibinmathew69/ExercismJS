@@ -10,7 +10,12 @@ export function createVisitor(name, age, ticketId) {
 }
 
 export function revokeTicket(visitor) {
-  throw new Error('Please implement the revokeTicket function.');
+	delete tickets[visitor['ticketId']];
+	return {
+		name: name,
+		age: age,
+		ticketId: null
+	}
 }
 
 export function ticketStatus(tickets, ticketId) {
