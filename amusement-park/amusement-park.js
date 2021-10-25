@@ -19,7 +19,13 @@ export function revokeTicket(visitor) {
 }
 
 export function ticketStatus(tickets, ticketId) {
-  throw new Error('Please implement the ticketStatus function.');
+	if (tickets.ticketId === undefined){
+		return "unknown ticket id";
+	}else if(tickets === null){
+		return "not sold";
+	}else{
+		return `sold to ${tickets.ticketId}`
+	}
 }
 
 export function simpleTicketStatus(tickets, ticketId) {
