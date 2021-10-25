@@ -29,9 +29,14 @@ export function ticketStatus(tickets, ticketId) {
 }
 
 export function simpleTicketStatus(tickets, ticketId) {
-  throw new Error('Please implement the simpleTicketStatus function.');
+	status = ticketStatus(tickets, ticketId);
+	if(status[0] == 's'){
+		return status.split(" ").slice(2).join(" ");
+	}else{
+		return "invalid ticket !!!";
+	}
 }
 
 export function gtcVersion(visitor) {
-  throw new Error('Please implement the gtcVersion function.');
+	
 }
