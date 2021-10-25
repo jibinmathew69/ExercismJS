@@ -38,5 +38,5 @@ export function simpleTicketStatus(tickets, ticketId) {
 }
 
 export function gtcVersion(visitor) {
-	
+	return visitor.gtc?.version;
 }
