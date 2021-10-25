@@ -10,21 +10,21 @@ export function createVisitor(name, age, ticketId) {
 }
 
 export function revokeTicket(visitor) {
-	delete tickets[visitor['ticketId']];
-	return {
-		name: name,
-		age: age,
-		ticketId: null
+	if(visitor.ticketId === null){
+		return visitor;
 	}
+	delete tickets[visitor['ticketId']];
+	visitor["ticketId"] = null;
+	return visitor;
 }
 
 export function ticketStatus(tickets, ticketId) {
-	if (tickets.ticketId === undefined){
+	if (tickets[ticketId] === undefined){
 		return "unknown ticket id";
-	}else if(tickets.ticketId === null){
+	}else if(tickets[ticketId] === null){
 		return "not sold";
 	}else{
-		return `sold to ${tickets.ticketId}`
+		return `sold to ${tickets[ticketId]}`
 	}
 }
 
