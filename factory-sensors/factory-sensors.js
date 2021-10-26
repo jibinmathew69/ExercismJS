@@ -25,15 +25,17 @@ export function reportOverheating(temperature) {
 export function monitorTheMachine(actions) {
 	try{
 		actions.check();
-	}catch (error instanceof ArgumentError){
-		actions.alertDeadSensor();
-	}catch(error instanceof OverheatingError){
-		if(error.temperature < 600){
-			actions.alertOverheating();
+	}catch(error){ 
+		if (error instanceof ArgumentError){
+			actions.alertDeadSensor();
+		}else if(error instanceof OverheatingError){
+			if(error.temperature < 600){
+				actions.alertOverheating();
+			}else{
+				actions.shutdown();
+			}
 		}else{
-			actions.shutdown();
+			throw error;
 		}
-	}catch(error){
-		throw error;
 	}
 }
