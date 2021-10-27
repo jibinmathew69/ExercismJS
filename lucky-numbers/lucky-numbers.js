@@ -4,7 +4,9 @@ export function twoSum(array1, array2) {
 }
 
 export function luckyNumber(value) {
-  throw new Error('Implement the luckyNumber function');
+	value = String(value);
+	let revString = [...value].reverse().join("");
+	return value === revString;
 }
 
 export function errorMessage(input) {
