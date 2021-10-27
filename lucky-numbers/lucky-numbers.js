@@ -1,6 +1,6 @@
 
 export function twoSum(array1, array2) {
-	return Number(String(array1).replace(',', '')) + Number(String(array2).replace(',', ''));
+	return Number(String(array1).replace(/,/g, '')) + Number(String(array2).replace(/,/g, ''));
 }
 
 export function luckyNumber(value) {
@@ -10,10 +10,10 @@ export function luckyNumber(value) {
 }
 
 export function errorMessage(input) {
-	if(input === ''){
-		throw new Error("Required field");
+	if(input === ''||input === null||input === undefined){
+		return "Required field";
 	}else if(isNaN(Number(input)) || Number(input) === 0){
-		throw new Error("Must be a number besides 0");
+		return "Must be a number besides 0";
 	}else{
 		return "";
 	}
