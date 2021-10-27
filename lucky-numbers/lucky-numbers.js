@@ -10,5 +10,11 @@ export function luckyNumber(value) {
 }
 
 export function errorMessage(input) {
-  throw new Error('Implement the errorMessage function');
+	if(input === ''){
+		throw new Error("Required field");
+	}else if(Number(input) === NaN || Number(input) === 0){
+		throw new Error("Must be a number besides 0");
+	}else{
+		return "";
+	}
 }
