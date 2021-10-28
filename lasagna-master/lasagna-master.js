@@ -14,7 +14,7 @@ export function preparationTime(layers, avgTime=2){
 
 export function quantities(layers){
 	function layerQuantity(layers, filterItem, quantity){
-		numLayer = layers.filter(layer === filterItem).length;
+		numLayer = layers.filter(layer => layer === filterItem).length;
 		return numLayer * quantity;
 	}
 	
@@ -25,7 +25,7 @@ export function quantities(layers){
 }
 
 export function addSecretIngredient(friendsList, myList){
-	myList.push(friendsList.at(-1));
+	myList.push(friendsList[friendsList.length-1]);
 }
 
 export function scaleRecipe(recipe, portions){
