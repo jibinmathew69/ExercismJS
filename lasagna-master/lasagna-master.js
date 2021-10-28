@@ -23,3 +23,7 @@ export function quantities(layers){
 		sauce: layerQuantity(layers, 'sauce', 0.4)
 	}
 }
+
+export function addSecretIngredient(friendsList, myList){
+	myList.push(friendsList.at(-1))
+}
