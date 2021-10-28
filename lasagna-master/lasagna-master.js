@@ -25,7 +25,7 @@ export function quantities(layers){
 }
 
 export function addSecretIngredient(friendsList, myList){
-	myList.push(friendsList.at(-1))
+	myList.push(friendsList.at(-1));
 }
 
 export function scaleRecipe(recipe, portions){
