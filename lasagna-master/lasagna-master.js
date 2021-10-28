@@ -14,13 +14,13 @@ export function preparationTime(layers, avgTime=2){
 
 export function quantities(layers){
 	function layerQuantity(layers, filterItem, quantity){
-		numLayer = layers.filter(layer => layer === filterItem).length;
+		let numLayer = layers.filter(layer => layer === filterItem).length;
 		return numLayer * quantity;
 	}
 	
 	return {
 		noodles: layerQuantity(layers,'noodles', 50),
-		sauce: layerQuantity(layers, 'sauce', 0.4)
+		sauce: layerQuantity(layers, 'sauce', 0.2)
 	}
 }
 
