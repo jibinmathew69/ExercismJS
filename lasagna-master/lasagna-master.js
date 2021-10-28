@@ -27,3 +27,15 @@ export function quantities(layers){
 export function addSecretIngredient(friendsList, myList){
 	myList.push(friendsList.at(-1))
 }
+
+export function scaleRecipe(recipe, portions){
+	function requiredQuantity(forTwo){
+		return (forTwo*quantity)/2;
+	}
+	let required = {};
+	
+	for(item in recipe){
+		required[item] = requiredQuantity(recipe[item]);
+	}
+	return required;
+}
