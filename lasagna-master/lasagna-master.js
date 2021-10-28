@@ -30,7 +30,7 @@ export function addSecretIngredient(friendsList, myList){
 
 export function scaleRecipe(recipe, portions){
 	function requiredQuantity(forTwo){
-		return (forTwo*quantity)/2;
+		return (forTwo*portions)/2;
 	}
 	let required = {};
 	
