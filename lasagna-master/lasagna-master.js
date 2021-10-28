@@ -7,3 +7,7 @@ export function cookingStatus(time){
 		return 'Not done, please wait.';
 	}
 }
+
+export function preparationTime(layers, avgTime=2){
+	return layers.length * avgTime;
+}
