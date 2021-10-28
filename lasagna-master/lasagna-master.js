@@ -34,7 +34,7 @@ export function scaleRecipe(recipe, portions){
 	}
 	let required = {};
 	
-	for(item in recipe){
+	for(let item in recipe){
 		required[item] = requiredQuantity(recipe[item]);
 	}
 	return required;
