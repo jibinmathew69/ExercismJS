@@ -11,3 +11,15 @@ export function cookingStatus(time){
 export function preparationTime(layers, avgTime=2){
 	return layers.length * avgTime;
 }
+
+export function quantities(layers){
+	function layerQuantity(layers, filterItem, quantity){
+		numLayer = layers.filter(layer === filterItem).length;
+		return numLayer * quantity;
+	}
+	
+	return {
+		noodles: layerQuantity(layers,'noodles', 50),
+		sauce: layerQuantity(layers, 'sauce', 0.4)
+	}
+}
