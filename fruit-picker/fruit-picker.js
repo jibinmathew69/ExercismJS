@@ -10,9 +10,19 @@ export function pickFruit(variety, quantity, callback) {
 }
 
 export function purchaseInventoryIfAvailable(err, isAvailable) {
-  throw new Error('Implement the purchaseInventoryIfAvailable function');
+	if(err){
+		throw new Error(err);
+	}
+
+	if(err == null){
+		if (isAvailable){
+			return "PURCHASE";
+		}else{
+			return "NOOP";
+		}
+	}
 }
 
 export function pickAndPurchaseFruit(variety, quantity) {
-  throw new Error('Implement the pickAndPurchaseFruit function');
+	return pickFruit(variety, quantity, purchaseInventoryIfAvailable);
 }
