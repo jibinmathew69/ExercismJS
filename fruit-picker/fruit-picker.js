@@ -1,5 +1,6 @@
-export function isServiceOnline(checkStatus) {
-	return checkStatus()==='ONLINE'? true: false;
+import { checkStatus, checkInventory } from './grocer';
+export function isServiceOnline() {
+	return checkStatus((status) => status === 'ONLINE');
 }
 
 export function pickFruit(variety, quantity, callback) {
