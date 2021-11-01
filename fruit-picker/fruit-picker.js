@@ -3,7 +3,10 @@ export function isServiceOnline(checkStatus) {
 }
 
 export function pickFruit(variety, quantity, callback) {
-  throw new Error('Implement the pickFruit function');
+	return checkInventory({
+													variety: variety,
+													quantity: quantity
+												}, callback);
 }
 
 export function purchaseInventoryIfAvailable(err, isAvailable) {
